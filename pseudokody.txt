@@ -1,0 +1,60 @@
+//mnożenie
+a, b
+wynik = 0
+while b > 0
+	d = b / 2
+	d *= 2
+	c = b - d
+	if c == 1
+		wynik += a
+	endif
+	a *= 2
+	b /= 2
+endwhile
+
+//dzielenie z dodaniem 1
+a, b
+wynik = 0
+if b > 0
+	c = b
+	while c <= a
+		c *= 2
+	endwhile
+	a += 1
+	while c > b
+		c /= 2
+		if a > c
+			wynik += 1
+			a -= c
+		endif
+	endwhile
+	a -= 1
+else
+	a = 0
+endif
+//reszta jest w a
+//wynik dzielenia jest w zmiennej wynik
+
+//dzielenie
+a, b
+wynik = 0
+if b > 0
+	c = b
+	while c <= a
+		c *= 2
+	endwhile
+	do
+		c /= 2
+		if c < b
+			break
+		endif
+		if a >= c
+			wynik += 1
+			a -= c
+		endif
+	while true
+else
+	a = 0
+endif
+//reszta jest w a
+//wynik dzielenia jest w zmiennej wynik
